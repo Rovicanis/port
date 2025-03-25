@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
+</head>
+<body>
+    <style>
+        
+        <style>
+                    * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Raleway', sans-serif;
+                    }
+
+                    body {
+                    background-color: lightblue;
+                    color: #333;
+                    line-height: 1.6;
+                    }
+
+                    #nav-bar {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background-color: #333;
+                    color: #fff;
+                    padding: 1em 0;
+                    z-index: 1000;
+                    margin: 0;
+                    }
+
+                    #nav-bar ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    }
+
+                    #nav-bar li {
+                    margin: 0 1em;
+                    }
+
+                    #nav-bar a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    }
+
+                    #nav-bar a:hover {
+                    color: #ff7f50;
+                    }
+
+                    #header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1em;
+                    background-color: #fff;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    #header-img {
+                    width: 150px;
+                    }
+
+                    #hero {
+                    background-color: lightblue;
+                    color: #fff;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    }
+
+                    #hero h2 {
+                    font-size: 2.5em;
+                    margin-bottom: 0.5em;
+                    }
+
+                    #form {
+                    margin-top: 1em;
+                    }
+
+                    #email {
+                    padding: 0.5em;
+                    width: 300px;
+                    max-width: 80%;
+                    border: none;
+                    border-radius: 5px;
+                    margin-bottom: 1em;
+                    }
+
+                    #submit {
+                    padding: 0.5em 1em;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: red;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    }
+
+                    #submit:hover {
+                    background-color: #ff6347;
+                    }
+
+                    .container {
+                    padding: 2em;
+                    }
+
+                    .grid {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 2em;
+                    }
+
+                    .icon {
+                    margin-right: 1em;
+                    }
+
+                    .icon i {
+                    color: #ff7f50;
+                    }
+
+                    .desc h2 {
+                    margin-bottom: 0.5em;
+                    }
+
+                    .product {
+                    background-color: #fff;
+                    padding: 1.5em;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    margin-bottom: 2em;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+
+                    .product:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .product h2 {
+                    color: #ff7f50;
+                    margin-bottom: 1em;
+                    font-size: 1.8em;
+                    }
+
+                    .product ol {
+                    list-style: none;
+                    padding: 0;
+                    margin-bottom: 1em;
+                    font-size: 1.1em;
+                    }
+
+                    .product li {
+                    margin-bottom: 0.5em;
+                    }
+
+                    .btn {
+                    padding: 0.5em 1em;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: red;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    font-size: 1.1em;
+                    }
+
+                    .btn:hover {
+                    background-color: #ff6347;
+                    }
+
+                    footer {
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    padding: 1em 0;
+                    }
+
+                    footer ul {
+                    list-style: none;
+                    padding: 0;
+                    margin-bottom: 1em;
+                    display: flex;
+                    justify-content: center;
+                    }
+
+                    footer li {
+                    margin: 0 1em;
+                    }
+
+                    footer a {
+                    color: #fff;
+                    text-decoration: none;
+                    }
+
+                    footer a:hover {
+                    color: #ff7f50;
+                    }
+
+                    #how_it_works {
+                    display: flex;
+                    justify-content: center;
+                    }
+
+                    #video {
+                    display: block;
+                    margin: 0 auto;
+                    }
+
+                    @media only screen and (max-width: 720px) {
+                    #nav-bar ul {
+                    flex-direction: column;
+                    }
+
+                    .grid {
+                    flex-direction: column;
+                    text-align: center;
+                    }
+
+                    .icon {
+                    margin-bottom: 1em;
+                    }
+
+                    #email {
+                    width: 100%;
+                    }
+                    }
+
+                    .product:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    background-color: red;
+                    }
+    </style>
+    <div id="page-wrapper">
+    <header id="header">
+    <nav id="nav-bar">
+        <ul>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#how_it_works">How It Works</a></li>
+     <li><a class="nav-link" href="#pricing">Pricing</a></li>
+       </ul>
+    </header>
+            <div class="container">
+            <section id="hero">
+        <h2>Discover the Magic of Pokémon TCG</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input id="email" placeholder="Enter your email address" type="email" name="email" required>
+        <br><input id="submit" type="submit" value="GET STARTED" class="btn"/></br>
+        </form>
+        </section>
+        <div class="container">
+            <section id="features">
+                <div class="grid">
+        <div class="grid">
+        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+        <div class="desc">
+        <h2>Exciting Cards</h2>
+        <p>Each booster pack contains a variety of cards, including rare and ultra-rare cards that will enhance your collection.</p>
+        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+                        <div class="desc">
+        <h2>Fast Shipping</h2>
+        <p>We ensure that you receive your booster packs quickly and in perfect condition, ready for your next battle.</p>
+        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="icon">
+                            <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+                        </div>
+                        <div class="desc">
+        <h2>Quality Assurance</h2>
+        <P>All our booster packs are carefully checked to ensure they contain the best cards and are free from any defects.</p>
+        </div>
+                    </div>
+                </section>
+                <section id="how_it_works">
+        <iframe height="340" id="video" src="https://www.youtube.com/embed/DvebUMgxJFM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen type="video/mp4"></iframe>
+        </section>
+        <section id="pricing">
+                    <div class="product" id="booster-pack">
+                        <div class="level">Booster Pack</div>
+                        <h2>$4.99</h2>
+                        <ol>
+                            <li>10 Random Cards</li>
+                            <li>1 Rare Card Guaranteed</li>
+                            <li>Chance for Ultra Rare Cards</li>
+                            <li>Perfect for Collectors</li>
+                        </ol>
+                        <button class="btn">Select</button>
+                    </div>
+                    <div class="product" id="elite-trainer-box">
+                        <div class="level">Elite Trainer Box</div>
+                        <h2>$39.99</h2>
+                        <ol>
+                            <li>8 Booster Packs</li>
+                            <li>65 Card Sleeves</li>
+                            <li>45 Energy Cards</li>
+                            <li>Player's Guide</li>
+                        </ol>
+                        <button class="btn">Select</button>
+                    </div>
+                    <div class="product" id="booster-box">
+                        <div class="level">Booster Box</div>
+                        <h2>$119.99</h2>
+                        <ol>
+                            <li>36 Booster Packs</li>
+                            <li>Guaranteed Rare Cards</li>
+                            <li>Perfect for Competitive Play</li>
+                            <li>Great Value</li>
+                        </ol>
+                        <button class="btn">Select</button>
+                    </div>
+                </section>
+                <footer>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <span>Copyright 2016, Original Trombones</span>
+                </footer>
+            </div>
+        </div>
+</body>
+</html>
