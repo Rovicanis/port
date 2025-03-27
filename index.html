@@ -7,9 +7,9 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif; /* Added Google Font */
             line-height: 1.6;
-            background-color: #e0f7fa; /* Light cyan background */
+            background-color: #f0f4c3; /* Light green background */
             color: #333;
         }
 
@@ -17,9 +17,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #138dae; /* Teal background */
+            background-color: #558b2f; /* Green background */
             color: white;
-            padding: 1em;
+            padding: 1em 2em;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
@@ -30,42 +30,73 @@
             padding: 0;
             display: flex;
             justify-content: space-around;
+            gap: 1em;
         }
 
         #navbar a {
             color: white;
             text-decoration: none;
             padding: 0.5em 1em;
-            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         #navbar a:hover {
-            background-color: #199cbd; /* Darker teal on hover */
+            background-color: #6d9e3f; /* Lighter green on hover */
+            box-shadow: 0 0 10px 2px rgba(109, 158, 63, 0.8); /* Glowing effect */
         }
 
         #welcome-section {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #b2ebf2; /* Lighter cyan background */
+            background: linear-gradient(135deg, #dcedc8, #aed581); /* Gradient background */
             text-align: center;
             padding: 2em;
+            color: #329ac0; /* Darker green text */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+            border-radius: 8px; /* Rounded corners */
+            animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in effect */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
         }
 
         #projects {
-            padding: 2em;
-            background-color: #b2dfdb; /* Light teal background */
+            padding: 4em 2em;
+            background-color: #c5e1a5; /* Light green background */
             text-align: center;
         }
 
+        #projects h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5em;
+            color: #2e7d32; /* Darker green for headings */
+        }
+
         .project-tile {
-            margin: 1em 0;
-            padding: 1em;
-            background-color: white;
+            margin: 1em auto;
+            padding: 1.5em;
+            background-color: #f9fbe7; /* Very light green background */
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 600px;
+            text-align: left; /* Align text to the left */
         }
 
         .project-tile:hover {
@@ -76,21 +107,61 @@
         .project-tile a {
             display: block;
             padding: 1em;
-            background-color: #00796b; /* Teal background */
+            background-color: #37a7df; /* Green background */
             color: white;
             text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center; /* Center align the text */
         }
 
         .project-tile a:hover {
-            background-color: #004d40; /* Darker teal on hover */
+            background-color: #689f38; /* Darker green on hover */
             transform: scale(1.05);
+            box-shadow: 0 0 15px 3px rgba(104, 159, 56, 0.8); /* Glowing effect */
+        }
+
+        #projects img {
+            margin-top: 2em;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #558b2f; /* Green background */
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #aed581; /* Light green */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
             #navbar ul {
                 flex-direction: column;
                 align-items: center;
+                gap: 1em;
+            }
+
+            #welcome-section h1 {
+                font-size: 2rem;
+            }
+
+            .project-tile {
+                padding: 1em;
+                text-align: center; /* Center align text for smaller screens */
             }
         }
     </style>
@@ -100,13 +171,12 @@
         <ul>
             <li><a href="#welcome-section">Welcome</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a id="profile-link" href=https://github.com/Rovicanis" target="_blank">Profile</a></li>
+            <li><a id="profile-link" href="https://github.com/yourusername" target="_blank">Profile</a></li>
         </ul>
     </nav>
 
     <section id="welcome-section">
-        <h1>Welcome to John Rovic Anis' Portfolio</h1>
-    </section>
+        <h1>Welcome to John Rovic Anis' Portfolio and this is my personal portfolio. Here, you will find a collection of my projects,</section>
 
     <section id="projects">
         <div class="project-tile">
@@ -166,8 +236,11 @@
         <div class="project-tile">
             <a href="Learn CSS Transforms by Building a Penguin.html" target="_blank">Learn CSS Transforms by Building a Penguin</a>
         </div>
+        <div class="project-tile">
+            <a href="EDU.html" target="_blank">EDUNEWS</a>
+        </div>
         <div style="text-align: center; margin-top: 2em;">
-            <img src="Screenshot 2025-03-27 110929.jpg" alt="Screenshot 2025-03-27 110929" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <img src="https://raw.githubusercontent.com/Rovicanis/port/refs/heads/main/Screenshot%202025-03-27%20110929.jpg" alt="Screenshot 2025-03-27 110929" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
         </div>
     </section></div>
 </body>
